@@ -1,45 +1,109 @@
 import { Link } from "wouter";
-import { MapPin, Phone, Mail, Instagram, GraduationCap, ChevronRight } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, Youtube, GraduationCap, ExternalLink, ChevronRight } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-[#1a1a2e] text-slate-300 pt-16 pb-8 border-t-4 border-primary">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          
+    <footer className="bg-[#1C2A1C] text-slate-300 pt-14 pb-0 border-t-4 border-secondary">
+
+      {/* ── QUICK ACCESS TILES ── */}
+      <div className="bg-primary/80 border-b border-white/10">
+        <div className="max-w-[1200px] mx-auto px-4 py-0">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+            {[
+              { label: "Apply Online", sub: "MSW Admission 2025", href: "/admissions", badge: "Open" },
+              { label: "Notices & Circulars", sub: "Academic & Admin", href: "/notices", badge: "NEW" },
+              { label: "Results / Exams", sub: "HNGU Result Portal", href: "https://hngu.ac.in", badge: null },
+              { label: "ERP / Student Login", sub: "University Portal", href: "https://hngu.ac.in", badge: null },
+            ].map((tile, i) => (
+              <a
+                key={i}
+                href={tile.href}
+                target={tile.href.startsWith("http") ? "_blank" : undefined}
+                rel={tile.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="flex flex-col items-center justify-center py-4 hover:bg-white/10 transition-colors text-center group"
+              >
+                {tile.badge && (
+                  <span className="text-[10px] font-bold bg-secondary text-secondary-foreground px-2 py-0.5 rounded mb-1">
+                    {tile.badge}
+                  </span>
+                )}
+                <span className="text-white font-semibold text-sm group-hover:text-secondary transition-colors">{tile.label}</span>
+                <span className="text-white/50 text-xs mt-0.5">{tile.sub}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ── MAIN FOOTER CONTENT ── */}
+      <div className="max-w-[1200px] mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
           {/* About */}
-          <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-3 inline-block mb-2">
-              <div className="bg-primary/20 text-primary p-2 rounded-full">
-                <GraduationCap className="h-8 w-8 text-primary" />
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0">
+                <GraduationCap className="h-6 w-6 text-secondary" />
               </div>
-              <div className="flex flex-col">
-                <span className="font-display font-bold text-xl text-white">Shree Reva</span>
-                <span className="text-xs font-medium text-slate-400 uppercase tracking-wider">MSW College</span>
+              <div>
+                <div className="text-white font-bold text-sm leading-tight" style={{ fontFamily: "Poppins, sans-serif" }}>
+                  Shree Reva MSW College
+                </div>
+                <div className="text-slate-400 text-xs">Palanpur, Gujarat</div>
               </div>
-            </Link>
-            <p className="text-sm leading-relaxed">
-              Shaping tomorrow's social workers through comprehensive education, practical field training, and a commitment to community service.
+            </div>
+            <p className="text-slate-400 text-sm leading-relaxed mb-5">
+              A premier institution for Master of Social Work education in North Gujarat, affiliated to HNGU Patan. Shaping compassionate social work professionals since 2009.
             </p>
-            <p className="text-xs text-slate-400">
-              Affiliated to Hemchandracharya North Gujarat University (HNGU), Patan
-            </p>
+            <div className="space-y-2 text-sm">
+              <div className="flex items-start gap-2 text-slate-400">
+                <MapPin className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
+                <span>Near Bus Stand, Palanpur, Banaskantha, Gujarat – 385001</span>
+              </div>
+              <a href="tel:+919876543210" className="flex items-center gap-2 text-slate-400 hover:text-secondary transition-colors">
+                <Phone className="h-4 w-4 text-secondary shrink-0" />
+                +91 98765 43210
+              </a>
+              <a href="mailto:info@revamswcollege.edu.in" className="flex items-center gap-2 text-slate-400 hover:text-secondary transition-colors">
+                <Mail className="h-4 w-4 text-secondary shrink-0" />
+                info@revamswcollege.edu.in
+              </a>
+            </div>
+            <div className="flex items-center gap-3 mt-5">
+              <a href="https://www.instagram.com/revamswcollege/" target="_blank" rel="noopener noreferrer"
+                className="w-8 h-8 rounded bg-white/10 hover:bg-secondary hover:text-secondary-foreground flex items-center justify-center transition-colors">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                className="w-8 h-8 rounded bg-white/10 hover:bg-secondary hover:text-secondary-foreground flex items-center justify-center transition-colors">
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+                className="w-8 h-8 rounded bg-white/10 hover:bg-secondary hover:text-secondary-foreground flex items-center justify-center transition-colors">
+                <Youtube className="h-4 w-4" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-white font-semibold text-lg border-b border-slate-700 pb-2 inline-block">Quick Links</h3>
+          <div>
+            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-white/10">Quick Links</h4>
             <ul className="space-y-2">
               {[
-                { label: "About Us", href: "/about" },
-                { label: "Admissions", href: "/admissions" },
-                { label: "Faculty", href: "/faculty" },
-                { label: "Notices", href: "/notices" },
+                { label: "Home", href: "/" },
+                { label: "About the College", href: "/about" },
+                { label: "MSW Programme", href: "/courses" },
+                { label: "Faculty Profile", href: "/faculty" },
+                { label: "Admissions 2025", href: "/admissions" },
+                { label: "Notices & Circulars", href: "/notices" },
+                { label: "Photo Gallery", href: "/gallery" },
                 { label: "Events", href: "/events" },
+                { label: "Contact Us", href: "/contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm hover:text-primary transition-colors flex items-center group">
-                    <ChevronRight className="h-3 w-3 mr-1 text-slate-600 group-hover:text-primary transition-colors" />
+                  <Link href={link.href}
+                    className="flex items-center gap-1.5 text-slate-400 hover:text-secondary text-sm transition-colors group">
+                    <ChevronRight className="h-3 w-3 text-secondary/50 group-hover:text-secondary transition-colors" />
                     {link.label}
                   </Link>
                 </li>
@@ -47,66 +111,83 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Courses */}
-          <div className="space-y-4">
-            <h3 className="text-white font-semibold text-lg border-b border-slate-700 pb-2 inline-block">Programme</h3>
+          {/* Academics */}
+          <div>
+            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-white/10">Academics</h4>
             <ul className="space-y-2">
-              <li>
-                <Link href="/courses" className="text-sm hover:text-primary transition-colors flex items-center group">
-                  <ChevronRight className="h-3 w-3 mr-1 text-slate-600 group-hover:text-primary transition-colors" />
-                  Master of Social Work (MSW)
-                </Link>
-              </li>
-              <li>
-                <Link href="/courses#field-work" className="text-sm hover:text-primary transition-colors flex items-center group">
-                  <ChevronRight className="h-3 w-3 mr-1 text-slate-600 group-hover:text-primary transition-colors" />
-                  Field Work
-                </Link>
-              </li>
-              <li>
-                <Link href="/courses#syllabus" className="text-sm hover:text-primary transition-colors flex items-center group">
-                  <ChevronRight className="h-3 w-3 mr-1 text-slate-600 group-hover:text-primary transition-colors" />
-                  Syllabus
-                </Link>
-              </li>
+              {[
+                { label: "MSW Curriculum", href: "/courses" },
+                { label: "Semester I & II", href: "/courses#sem1" },
+                { label: "Semester III & IV", href: "/courses#sem3" },
+                { label: "Field Work Placements", href: "/courses#field" },
+                { label: "Specialisations", href: "/courses#spec" },
+                { label: "Research & Dissertations", href: "/courses#research" },
+                { label: "Examination Schedule", href: "/notices" },
+                { label: "HNGU Ordinances", href: "https://hngu.ac.in" },
+              ].map((link, i) => (
+                <li key={i}>
+                  <a href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="flex items-center gap-1.5 text-slate-400 hover:text-secondary text-sm transition-colors group">
+                    <ChevronRight className="h-3 w-3 text-secondary/50 group-hover:text-secondary transition-colors" />
+                    {link.label}
+                    {link.href.startsWith("http") && <ExternalLink className="h-3 w-3 opacity-40" />}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact */}
-          <div className="space-y-4">
-            <h3 className="text-white font-semibold text-lg border-b border-slate-700 pb-2 inline-block">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-3 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm">Palanpur, Banaskantha District, Gujarat - 385001</span>
-              </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 mr-3 text-primary shrink-0" />
-                <span className="text-sm">+91 98765 43210</span>
-              </li>
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 mr-3 text-primary shrink-0" />
-                <span className="text-sm">info@revamswcollege.edu.in</span>
-              </li>
+          {/* Important / Map */}
+          <div>
+            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-white/10">Important Links</h4>
+            <ul className="space-y-2 mb-6">
+              {[
+                { label: "HNGU Official Website", href: "https://hngu.ac.in" },
+                { label: "UGC – University Grants", href: "https://ugc.gov.in" },
+                { label: "NAAC Accreditation", href: "https://naac.gov.in" },
+                { label: "Ministry of Education", href: "https://education.gov.in" },
+                { label: "National Service Scheme", href: "https://nss.gov.in" },
+                { label: "Swayam Online Courses", href: "https://swayam.gov.in" },
+              ].map((link, i) => (
+                <li key={i}>
+                  <a href={link.href} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-slate-400 hover:text-secondary text-sm transition-colors group">
+                    <ChevronRight className="h-3 w-3 text-secondary/50 group-hover:text-secondary" />
+                    {link.label}
+                    <ExternalLink className="h-3 w-3 opacity-40" />
+                  </a>
+                </li>
+              ))}
             </ul>
-            <div className="pt-2">
-              <a 
-                href="https://www.instagram.com/revamswcollege/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-800 hover:bg-primary text-white transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
+            {/* Map thumbnail */}
+            <div className="rounded overflow-hidden border border-white/10 h-28">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.5!2d72.4356!3d24.1717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395cbc!2sPalanpur!5e0!3m2!1sen!2sin!4v1"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                title="Palanpur location"
+              />
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Shree Reva MSW College. All rights reserved.</p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="/privacy" className="hover:text-slate-300">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-slate-300">Terms of Service</Link>
+      {/* ── BOTTOM BAR ── */}
+      <div className="border-t border-white/10 bg-black/30">
+        <div className="max-w-[1200px] mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+          <p>© {new Date().getFullYear()} Shree Reva MSW College, Palanpur. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <Link href="/about" className="hover:text-secondary transition-colors">Privacy Policy</Link>
+            <span>|</span>
+            <Link href="/about" className="hover:text-secondary transition-colors">Disclaimer</Link>
+            <span>|</span>
+            <Link href="/contact" className="hover:text-secondary transition-colors">Sitemap</Link>
+            <span>|</span>
+            <a href="https://hngu.ac.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">HNGU, Patan</a>
           </div>
         </div>
       </div>

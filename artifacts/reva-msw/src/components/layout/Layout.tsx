@@ -10,8 +10,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans">
       <Navbar />
-      {/* pt-24 to account for fixed navbar */}
-      <main className="flex-grow flex flex-col pt-[72px] md:pt-[104px]">
+      <main className="flex-grow flex flex-col">
         {children}
       </main>
       <Footer />
