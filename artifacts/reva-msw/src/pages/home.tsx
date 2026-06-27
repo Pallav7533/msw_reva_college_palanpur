@@ -19,19 +19,19 @@ const heroSlides = [
     title: "Shaping Tomorrow's Social Workers",
     sub: "A premier MSW institution in Palanpur, North Gujarat — HNGU affiliated, NAAC recognised. Blending academic rigour with immersive field practice.",
     cta: "Apply for MSW 2025",
-    bg: "from-primary via-primary/90 to-green-900",
+    bg: "from-primary via-primary/95 to-primary/80",
   },
   {
     title: "Excellence in Social Work Education",
     sub: "Transforming compassionate individuals into skilled professionals who drive social change across Gujarat and beyond.",
     cta: "Explore Programme",
-    bg: "from-green-900 via-primary to-primary/90",
+    bg: "from-primary/90 via-primary to-primary/85",
   },
   {
     title: "Field Practice. Research. Leadership.",
     sub: "Our graduates lead in NGOs, government agencies, CSR bodies and international organisations across India.",
     cta: "View Placements",
-    bg: "from-primary/95 via-green-800 to-primary",
+    bg: "from-primary/80 via-primary/95 to-primary",
   },
 ];
 

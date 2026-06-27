@@ -35,15 +35,15 @@ export default function Admissions() {
                 <CardContent className="p-6">
                   <ul className="space-y-4 text-muted-foreground">
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-secondary mr-3 shrink-0 mt-0.5" />
                       <span>Candidates must possess a Bachelor's Degree (BA, B.Com, B.Sc, BBA, BCA, etc.) from any recognized university.</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-secondary mr-3 shrink-0 mt-0.5" />
                       <span>Minimum percentage as per HNGU university norms.</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-secondary mr-3 shrink-0 mt-0.5" />
                       <span>Final year students awaiting results may apply provisionally.</span>
                     </li>
                   </ul>
