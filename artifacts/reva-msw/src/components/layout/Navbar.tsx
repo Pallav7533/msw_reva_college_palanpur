@@ -279,7 +279,7 @@ export function Navbar() {
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ type: "tween", duration: 0.25 }}
-                className="md:hidden fixed top-0 right-0 h-full w-[80vw] max-w-sm bg-background z-50 overflow-y-auto shadow-2xl flex flex-col"
+                className="md:hidden fixed top-0 right-0 h-full w-[80vw] max-w-sm bg-white z-50 overflow-y-auto shadow-2xl flex flex-col"
               >
                 {/* Drawer header */}
                 <div className="bg-primary px-5 py-4 flex items-center justify-between shrink-0">

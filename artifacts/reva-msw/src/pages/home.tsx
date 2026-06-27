@@ -96,9 +96,31 @@ export default function Home() {
       <ApplyModal open={applyOpen} onClose={() => setApplyOpen(false)} />
 
       {/* ══ HERO BANNER ══ */}
-      <section className="relative flex items-center overflow-hidden bg-primary">
-        <div className={`absolute inset-0 bg-gradient-to-br ${heroSlides[slide].bg} transition-all duration-1000`} />
-        <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.07) 1px, transparent 0)", backgroundSize: "28px 28px" }} />
+      <section className="relative flex items-center overflow-hidden bg-primary min-h-[520px] md:min-h-0">
+        {/* Main gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#5a1520] via-primary to-[#4a1018]" />
+
+        {/* Large decorative gold ring top-right */}
+        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full border-[60px] opacity-10"
+          style={{ borderColor: "#C4920A" }} />
+        <div className="absolute -top-16 -right-16 w-[300px] h-[300px] rounded-full border-[30px] opacity-15"
+          style={{ borderColor: "#C4920A" }} />
+
+        {/* Gold glow spot top-right */}
+        <div className="absolute top-0 right-0 w-[400px] h-[300px] opacity-25"
+          style={{ background: "radial-gradient(ellipse at top right, #C4920A 0%, transparent 65%)" }} />
+
+        {/* Gold glow bottom-left */}
+        <div className="absolute bottom-0 left-0 w-[350px] h-[280px] opacity-20"
+          style={{ background: "radial-gradient(ellipse at bottom left, #C4920A 0%, transparent 65%)" }} />
+
+        {/* Subtle diagonal lines */}
+        <div className="absolute inset-0 opacity-[0.06]"
+          style={{ backgroundImage: "repeating-linear-gradient(45deg, white 0px, white 1px, transparent 1px, transparent 18px)" }} />
+
+        {/* Bottom wave shape */}
+        <div className="absolute bottom-0 left-0 right-0 h-10 bg-background"
+          style={{ clipPath: "ellipse(55% 100% at 50% 100%)" }} />
 
         <div className="relative z-10 max-w-[1200px] mx-auto px-4 pt-10 pb-12 w-full grid md:grid-cols-2 gap-10 items-center">
           <motion.div
