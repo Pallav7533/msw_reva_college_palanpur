@@ -1,0 +1,472 @@
+# MASTER PROMPT – Build Premium Website for Shree Reva MSW College
+
+You are an award-winning UI/UX Designer, Branding Expert, Senior Full Stack Developer and SEO Specialist.
+
+Your task is to design and develop a world-class, premium, modern university-level website for **Shree Reva MSW College, Palanpur, Gujarat, India**.
+
+The final website should look comparable to premium universities like Nirma University, PDEU, Ahmedabad University or DAIICT, while maintaining the original branding and identity of Shree Reva MSW College.
+
+## IMPORTANT DATA SOURCE
+
+Do NOT use placeholder content.
+
+Use ONLY the publicly available information from the following sources.
+
+### Primary Sources
+
+1. Google Business Profile of Shree Reva MSW College: https://share.google/aug8L8NJzW2bgp5c6
+2. Official Instagram Page (revamswcollege): https://www.instagram.com/revamswcollege/?hl=en
+
+Every image, logo, branding element, event photograph, classroom image, faculty image, activity image, campus image, seminar image, workshop image, NSS image, celebration image, placement image, awards image, banners and visual content should be taken from the Instagram page wherever possible.
+
+All available business information including
+
+• College Name
+• Address
+• Phone Number
+• Description
+• Timings
+• Reviews
+• Rating
+• Google Map Location
+• Highlights
+
+should be collected from the Google Business Profile.
+
+Do NOT create fake faculty.
+
+Do NOT generate imaginary campus images.
+
+Do NOT use stock photos unless absolutely necessary.
+
+If an image exists on Instagram, always prefer that image.
+
+Analyze every Instagram post individually.
+
+Categorize every image into proper website sections.
+
+Examples:
+
+Campus
+
+Faculty
+
+Seminars
+
+Social Work
+
+Village Visit
+
+NSS
+
+Blood Donation
+
+Tree Plantation
+
+Events
+
+Annual Function
+
+Convocation
+
+Guest Lectures
+
+Celebration
+
+Classroom
+
+Workshops
+
+Field Work
+
+Awards
+
+Student Activities
+
+Gallery
+
+etc.
+
+The Instagram page is the official visual identity of the college.
+
+Use it as the branding reference.
+
+---
+
+## DESIGN STYLE
+
+The website should feel premium.
+
+Modern.
+
+Minimal.
+
+Elegant.
+
+Professional.
+
+Trustworthy.
+
+Educational.
+
+Never look like a government portal.
+
+Never look outdated.
+
+Never look like a template.
+
+Use lots of whitespace.
+
+Rounded cards.
+
+Soft shadows.
+
+Smooth animations.
+
+Glassmorphism where appropriate.
+
+Large typography.
+
+Premium spacing.
+
+Excellent responsiveness.
+
+---
+
+## COLOR PALETTE
+
+Analyze the Instagram profile.
+
+Extract the branding colors automatically.
+
+Create the website theme using those colors.
+
+Primary Green
+
+Secondary White
+
+Accent Gold
+
+Natural Gradients
+
+Premium Background
+
+---
+
+## TYPOGRAPHY
+
+Poppins
+
+Inter
+
+Large headings
+
+Readable body text
+
+Professional hierarchy
+
+---
+
+## WEBSITE STRUCTURE
+
+Create the complete sitemap.
+
+Home
+
+About
+
+Vision & Mission
+
+Principal Message
+
+Courses
+
+MSW Programme
+
+Admissions
+
+Admission Process
+
+Eligibility
+
+Fees
+
+Faculty
+
+Campus Facilities
+
+Student Activities
+
+Field Work
+
+Placements
+
+Gallery
+
+Events
+
+News
+
+Downloads
+
+Notices
+
+Contact
+
+FAQ
+
+Privacy Policy
+
+---
+
+## HOME PAGE
+
+Hero Section
+
+Full screen campus image from Instagram.
+
+Professional headline.
+
+Admission Button.
+
+Call Button.
+
+WhatsApp Button.
+
+Animated Statistics.
+
+About College.
+
+Principal Message.
+
+Why Choose Reva.
+
+Course Highlights.
+
+Campus Facilities.
+
+Student Life.
+
+Gallery Preview.
+
+Latest Events.
+
+Testimonials using Google Reviews.
+
+Instagram Feed.
+
+Google Map.
+
+Contact Form.
+
+Footer.
+
+---
+
+## GALLERY
+
+Automatically classify every Instagram image.
+
+Create beautiful masonry gallery.
+
+Hover animation.
+
+Lightbox.
+
+Category filters.
+
+---
+
+## TESTIMONIALS
+
+Use Google Review content.
+
+Display
+
+Student Name
+
+Rating
+
+Review
+
+Professional cards.
+
+---
+
+## CONTACT PAGE
+
+Google Map
+
+Phone
+
+Address
+
+Instagram
+
+Inquiry Form
+
+---
+
+## SEO
+
+Generate complete SEO.
+
+Meta Titles.
+
+Meta Descriptions.
+
+Structured Data.
+
+Open Graph.
+
+Twitter Cards.
+
+robots.txt
+
+sitemap.xml
+
+Canonical URLs.
+
+Schema.org.
+
+---
+
+## PERFORMANCE
+
+90+ Lighthouse Score
+
+SEO 100
+
+Accessibility 100
+
+Responsive 100
+
+Optimized Images
+
+Lazy Loading
+
+Next Generation Image Formats
+
+---
+
+## ANIMATIONS
+
+Framer Motion
+
+Smooth scrolling
+
+Fade animations
+
+Counters
+
+Hover effects
+
+Scroll reveal
+
+Loading animation
+
+---
+
+## TECH STACK
+
+Next.js
+
+TypeScript
+
+Tailwind CSS
+
+shadcn/ui
+
+Framer Motion
+
+Lucide Icons
+
+Node.js
+
+Express
+
+MongoDB or PostgreSQL
+
+Cloudinary
+
+JWT Authentication
+
+---
+
+## ADMIN PANEL
+
+Dashboard
+
+Manage Gallery
+
+Manage Notices
+
+Manage Faculty
+
+Manage Events
+
+Manage Admissions
+
+Manage Placements
+
+Manage Downloads
+
+Manage Website Content
+
+Manage SEO
+
+Manage Contact Queries
+
+---
+
+## RESPONSIVENESS
+
+Desktop
+
+Laptop
+
+Tablet
+
+Mobile
+
+Everything should be perfectly responsive.
+
+---
+
+## OUTPUT
+
+Generate
+
+Complete Sitemap
+
+Wireframes
+
+UI Design
+
+Color System
+
+Typography System
+
+Component Library
+
+Page Layouts
+
+Complete Folder Structure
+
+Production Ready Code Architecture
+
+Database Design
+
+Admin Panel Structure
+
+SEO Plan
+
+Image Mapping Plan
+
+Content Mapping Plan
+
+Responsive Design Plan
+
+Deployment Plan
+
+The final result should feel like a ₹20+ lakh premium university website built by a top design agency, while preserving the authentic branding, identity, images and information of Shree Reva MSW College through its Google Business Profile and Instagram presence.

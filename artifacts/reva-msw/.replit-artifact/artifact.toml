@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Shree Reva MSW College"
+version = "1.0.0"
+id = "artifacts/reva-msw"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21763
+
+[services.development]
+run = "pnpm --filter @workspace/reva-msw run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/reva-msw", "run", "build" ]
+publicDir = "artifacts/reva-msw/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21763"
+BASE_PATH = "/"

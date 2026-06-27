@@ -3,13 +3,17 @@ info:
   # Do not change the title, if the title changes, the import paths will be broken
   title: Api
   version: 0.1.0
-  description: API specification
+  description: API specification for Shree Reva MSW College website
 servers:
   - url: /api
     description: Base API path
 tags:
   - name: health
     description: Health operations
+  - name: contact
+    description: Contact form submissions
+  - name: notices
+    description: College notices and announcements
 paths:
   /healthz:
     get:
@@ -24,6 +28,61 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+
+  /contact:
+    post:
+      operationId: submitContact
+      tags: [contact]
+      summary: Submit contact inquiry
+      description: Submit a contact/admission inquiry form
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactInput"
+      responses:
+        "201":
+          description: Inquiry submitted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactSubmission"
+        "400":
+          description: Invalid input
+
+  /notices:
+    get:
+      operationId: getNotices
+      tags: [notices]
+      summary: Get all notices
+      description: Returns latest college notices and announcements
+      responses:
+        "200":
+          description: List of notices
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Notice"
+
+  /notices/latest:
+    get:
+      operationId: getLatestNotices
+      tags: [notices]
+      summary: Get latest 5 notices
+      description: Returns 5 most recent notices for homepage ticker
+      responses:
+        "200":
+          description: Latest notices
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Notice"
+
 components:
   schemas:
     HealthStatus:
@@ -34,3 +93,75 @@ components:
       required:
         - status
 
+    ContactInput:
+      type: object
+      required:
+        - name
+        - email
+        - phone
+        - message
+      properties:
+        name:
+          type: string
+          minLength: 2
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+        subject:
+          type: ["string", "null"]
+        message:
+          type: string
+          minLength: 10
+
+    ContactSubmission:
+      type: object
+      required:
+        - id
+        - name
+        - email
+        - phone
+        - message
+        - createdAt
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        subject:
+          type: ["string", "null"]
+        message:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+
+    Notice:
+      type: object
+      required:
+        - id
+        - title
+        - category
+        - createdAt
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        category:
+          type: string
+          enum: [admission, academic, event, general, exam]
+        description:
+          type: ["string", "null"]
+        fileUrl:
+          type: ["string", "null"]
+        isNew:
+          type: boolean
+        createdAt:
+          type: string
+          format: date-time
