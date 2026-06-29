@@ -96,31 +96,14 @@ export default function Home() {
       <ApplyModal open={applyOpen} onClose={() => setApplyOpen(false)} />
 
       {/* ══ HERO BANNER ══ */}
-      <section className="relative flex items-center overflow-hidden bg-primary min-h-[520px] md:min-h-0">
-        {/* Main gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5a1520] via-primary to-[#4a1018]" />
-
-        {/* Large decorative gold ring top-right */}
-        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full border-[60px] opacity-10"
-          style={{ borderColor: "#C4920A" }} />
-        <div className="absolute -top-16 -right-16 w-[300px] h-[300px] rounded-full border-[30px] opacity-15"
-          style={{ borderColor: "#C4920A" }} />
-
-        {/* Gold glow spot top-right */}
-        <div className="absolute top-0 right-0 w-[400px] h-[300px] opacity-25"
-          style={{ background: "radial-gradient(ellipse at top right, #C4920A 0%, transparent 65%)" }} />
-
-        {/* Gold glow bottom-left */}
-        <div className="absolute bottom-0 left-0 w-[350px] h-[280px] opacity-20"
-          style={{ background: "radial-gradient(ellipse at bottom left, #C4920A 0%, transparent 65%)" }} />
-
-        {/* Subtle diagonal lines */}
-        <div className="absolute inset-0 opacity-[0.06]"
-          style={{ backgroundImage: "repeating-linear-gradient(45deg, white 0px, white 1px, transparent 1px, transparent 18px)" }} />
-
-        {/* Bottom wave shape */}
-        <div className="absolute bottom-0 left-0 right-0 h-10 bg-background"
-          style={{ clipPath: "ellipse(55% 100% at 50% 100%)" }} />
+      <section className="relative flex items-center overflow-hidden min-h-[560px] md:min-h-[580px]">
+        {/* Real campus background image */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1920&auto=format&fit=crop')" }} />
+        {/* Dark maroon gradient overlay — heavy on left, lighter on right to show image */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/97 via-primary/90 to-primary/65" />
+        {/* Bottom vignette */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary/80 to-transparent" />
 
         <div className="relative z-10 max-w-[1200px] mx-auto px-4 pt-10 pb-12 w-full grid md:grid-cols-2 gap-10 items-center">
           <motion.div
@@ -242,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* ══ QUICK ACCESS TILES ══ */}
-      <section className="bg-[#FFFDF8] border-b border-border py-0">
+      <section className="bg-background border-b border-border py-0">
         <div className="max-w-[1200px] mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-0 divide-x divide-border border-x border-border">
             {quickLinks.map((tile, i) => (
@@ -303,11 +286,12 @@ export default function Home() {
                     </Link>
                   </div>
                   <div className="space-y-3">
-                    <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 border border-border flex items-center justify-center">
-                      <div className="text-center p-6">
-                        <GraduationCap className="h-16 w-16 text-primary/40 mx-auto mb-3" />
-                        <p className="text-muted-foreground text-xs">Shree Reva MSW College Campus<br />Palanpur, Gujarat</p>
-                      </div>
+                    <div className="aspect-[4/3] rounded-lg overflow-hidden border border-border shadow-sm">
+                      <img
+                        src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop"
+                        alt="Shree Reva MSW College Campus, Palanpur"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
                     </div>
                     <div className="grid grid-cols-2 gap-2">
                       {[
@@ -334,8 +318,12 @@ export default function Home() {
                 </div>
                 <div className="p-5 flex flex-col md:flex-row gap-5">
                   <div className="shrink-0">
-                    <div className="w-28 h-28 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 border-2 border-primary/20 flex items-center justify-center">
-                      <Users className="h-12 w-12 text-primary/40" />
+                    <div className="w-28 h-28 rounded-lg overflow-hidden border-2 border-primary/20 shadow-sm">
+                      <img
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop&crop=face"
+                        alt="Principal, Shree Reva MSW College"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="text-center mt-2">
                       <div className="font-bold text-sm text-foreground" style={{ fontFamily: "Poppins" }}>Dr. [Principal Name]</div>
@@ -568,12 +556,21 @@ export default function Home() {
             </a>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {["NSS Camp & Social Service", "Guest Lectures & Seminars", "Field Work Presentations", "Cultural & Sports Events",
-              "Blood Donation Drive", "Community Outreach Projects", "Annual Prize Distribution", "Alumni Meet & Networking"].map((label, i) => (
+            {[
+              { label: "NSS Camp & Social Service", img: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=400&auto=format&fit=crop" },
+              { label: "Guest Lectures & Seminars", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=400&auto=format&fit=crop" },
+              { label: "Field Work Presentations", img: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=400&auto=format&fit=crop" },
+              { label: "Cultural & Sports Events", img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=400&auto=format&fit=crop" },
+              { label: "Blood Donation Drive", img: "https://images.unsplash.com/photo-1582213782179-e4776f4ad9f4?q=80&w=400&auto=format&fit=crop" },
+              { label: "Community Outreach", img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=400&auto=format&fit=crop" },
+              { label: "Annual Prize Distribution", img: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=400&auto=format&fit=crop" },
+              { label: "Alumni Meet & Networking", img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=400&auto=format&fit=crop" },
+            ].map((item, i) => (
               <a key={i} href="https://www.instagram.com/revamswcollege/" target="_blank" rel="noopener noreferrer"
-                className="aspect-square bg-gradient-to-br from-primary/20 to-primary/5 border border-border rounded-lg flex flex-col items-center justify-center gap-2 hover:from-primary/30 hover:border-primary/30 transition-all group cursor-pointer">
-                <GraduationCap className="h-8 w-8 text-primary/30 group-hover:text-primary/60 transition-colors" />
-                <span className="text-[10px] text-muted-foreground text-center px-2 leading-snug">{label}</span>
+                className="aspect-square relative overflow-hidden rounded-lg group cursor-pointer border border-border shadow-sm">
+                <img src={item.img} alt={item.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent" />
+                <span className="absolute bottom-0 left-0 right-0 p-2 text-white text-[11px] font-semibold leading-snug text-center">{item.label}</span>
               </a>
             ))}
           </div>
@@ -592,9 +589,9 @@ export default function Home() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { name: "Priya Sharma", batch: "MSW Batch 2020–22", role: "Programme Officer, UNICEF India", quote: "Shree Reva gave me both the academic foundation and practical field experience that directly led to my current role at UNICEF. The faculty's guidance was exceptional." },
-              { name: "Rahul Patel", batch: "MSW Batch 2019–21", role: "District Social Worker, Govt. of Gujarat", quote: "The field work placements at Shree Reva were invaluable. I worked with tribal communities in Banaskantha which built my understanding of ground-level social issues." },
-              { name: "Kavita Joshi", batch: "MSW Batch 2021–23", role: "CSR Manager, Tata Trusts", quote: "The research methodology training and dissertation project at Shree Reva MSW College equipped me perfectly for CSR programme design and evaluation." },
+              { name: "Priya Sharma", batch: "MSW Batch 2020–22", role: "Programme Officer, UNICEF India", quote: "Shree Reva gave me both the academic foundation and practical field experience that directly led to my current role at UNICEF. The faculty's guidance was exceptional.", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop&crop=face" },
+              { name: "Rahul Patel", batch: "MSW Batch 2019–21", role: "District Social Worker, Govt. of Gujarat", quote: "The field work placements at Shree Reva were invaluable. I worked with tribal communities in Banaskantha which built my understanding of ground-level social issues.", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop&crop=face" },
+              { name: "Kavita Joshi", batch: "MSW Batch 2021–23", role: "CSR Manager, Tata Trusts", quote: "The research methodology training and dissertation project at Shree Reva MSW College equipped me perfectly for CSR programme design and evaluation.", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop&crop=face" },
             ].map((t, i) => (
               <motion.div key={i}
                 initial={{ opacity: 0, y: 15 }}
@@ -608,8 +605,8 @@ export default function Home() {
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4 italic">"{t.quote}"</p>
                 <div className="flex items-center gap-3 pt-3 border-t border-border">
-                  <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Users className="h-4 w-4 text-primary" />
+                  <div className="w-9 h-9 rounded-full overflow-hidden border border-primary/20 shrink-0">
+                    <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <div className="font-bold text-sm text-foreground">{t.name}</div>
