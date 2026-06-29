@@ -99,9 +99,28 @@ export function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
-  const tickerItems = notices?.length
-    ? notices.map((n) => n.title)
-    : ["Admissions Open 2025-26 for MSW Programme", "Guest Lecture on Social Policy", "NSS Camp Registration Open"];
+  const tickerItems = (
+    Array.isArray(notices)
+      ? notices
+      : Array.isArray((notices as any)?.data)
+        ? (notices as any).data
+        : Array.isArray((notices as any)?.items)
+          ? (notices as any).items
+          : []
+  )
+    .map((n: any) => n?.title)
+    .filter(Boolean);
+  
+  const finalTickerItems =
+    tickerItems.length > 0
+      ? tickerItems
+      : [
+          "Admissions Open 2025-26 for MSW Programme",
+          "Guest Lecture on Social Policy",
+          "NSS Camp Registration Open",
+        ];
+
+
 
   return (
     <>
@@ -162,7 +181,7 @@ export function Navbar() {
               </span>
               <div className="overflow-hidden flex-1">
                 <div className="animate-marquee whitespace-nowrap text-xs text-foreground">
-                  {[...tickerItems, ...tickerItems].map((item, i) => (
+                {[...finalTickerItems, ...finalTickerItems].map((item, i) => (
                     <span key={i} className="inline-flex items-center mr-12">
                       <span className="text-secondary mr-2">◆</span>{item}
                     </span>

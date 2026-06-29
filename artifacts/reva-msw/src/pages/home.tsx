@@ -79,8 +79,17 @@ const facilities = [
 export default function Home() {
   const [slide, setSlide] = useState(0);
   const [applyOpen, setApplyOpen] = useState(false);
-  const { data: notices } = useGetNotices();
-  const recentNotices = notices?.slice(0, 6) || [];
+  const { data } = useGetNotices();
+
+const notices = Array.isArray(data)
+  ? data
+  : Array.isArray((data as any)?.data)
+    ? (data as any).data
+    : Array.isArray((data as any)?.items)
+      ? (data as any).items
+      : [];
+
+const recentNotices = notices.slice(0, 6);
 
   useEffect(() => {
     document.title = "Shree Reva MSW College | Master of Social Work — Palanpur, Gujarat";
