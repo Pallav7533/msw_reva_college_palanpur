@@ -1,10 +1,14 @@
 import { defineConfig } from "drizzle-kit";
-import path from "path";
 import { readFileSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Load root .env file so this works both on Replit and locally
 try {
-  const envPath = path.join(__dirname, "../../.env");
+  const envPath = join(__dirname, "../../.env");
   const lines = readFileSync(envPath, "utf-8").split("\n");
   for (const line of lines) {
     const trimmed = line.trim();
@@ -24,7 +28,7 @@ if (!process.env.DATABASE_URL) {
 }
 
 export default defineConfig({
-  schema: path.join(__dirname, "./src/schema/index.ts"),
+  schema: "./src/schema/**/*.ts",
   dialect: "postgresql",
   dbCredentials: {
     url: process.env.DATABASE_URL,
