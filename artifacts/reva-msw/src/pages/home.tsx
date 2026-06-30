@@ -61,10 +61,10 @@ const whyChoose = [
 ];
 
 const courses = [
-  { sem: "Sem I", subjects: ["Social Work: History & Philosophy", "Human Behaviour & Social Environment", "Social Research Methods", "Community Organisation", "Concurrent Field Work I"] },
-  { sem: "Sem II", subjects: ["Social Policy & Planning", "Family & Child Welfare", "Medical & Psychiatric SW", "Industrial Social Work", "Concurrent Field Work II"] },
-  { sem: "Sem III", subjects: ["Specialisation Paper I & II", "Administration in Social Work", "Tribal & Rural Development", "Concurrent Field Work III"] },
-  { sem: "Sem IV", subjects: ["Specialisation Paper III & IV", "Block Field Placement", "Research Project / Dissertation", "Seminar & Viva Voce"] },
+  { sem: "Sem I", subjects: ["Introduction to Social Work", "Human Growth and Development", "Sociology and Contemporary Society", "Social Case Work", "Field Work Practicum I","Communication Skills / Orientation Seminar"] },
+  { sem: "Sem II", subjects: ["Social Group Work", "Community Organization", "Social Work Research", "Social Welfare Administration", "Social Policy, Planning and Legislation","Field Work Practicum II","Rural Camp"] },
+  { sem: "Sem III", subjects: ["Labour Welfare and Human Resource Management", "Health Care and Social Work Practice", "Gender and Development", "Counseling: Theory and Practice","Field Work Practicum III","Block Placement / Agency Visits"] },
+  { sem: "Sem IV", subjects: ["Project Planning, Monitoring and Evaluation", "Disaster Management / NGO Management", "Human Rights and Social Justice", "Elective Paper","Dissertation / Research Project","Field Work Practicum IV","Viva Voce"] },
 ];
 
 const facilities = [

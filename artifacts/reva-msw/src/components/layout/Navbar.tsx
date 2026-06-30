@@ -155,9 +155,8 @@ export function Navbar() {
         <div className="max-w-[1200px] mx-auto px-4 py-3 flex items-center gap-6">
           {/* Logo + name */}
           <Link href="/" className="flex items-center gap-4 group shrink-0">
-            <div className="w-[60px] h-[60px] rounded-full bg-primary flex items-center justify-center shadow group-hover:shadow-md transition-shadow">
-              <GraduationCap className="h-7 w-7 text-secondary" />
-            </div>
+          <img src="/reva-logo.jpg" alt="Shree Reva MSW College Logo"
+  className="w-[70px] h-[70px] rounded-full object-contain shadow group-hover:shadow-md transition-shadow bg-white p-1 ring-[2px] ring-primary" />
             <div>
               <div className="text-primary font-bold text-[1.15rem] leading-tight" style={{ fontFamily: "Poppins,sans-serif" }}>
                 Shree Reva MSW College
@@ -252,31 +251,32 @@ export function Navbar() {
             </div>
 
             {/* Mobile: logo + hamburger */}
-            <div className="md:hidden flex items-center justify-between h-14">
-              <Link href="/" className="flex items-center gap-2 text-primary-foreground font-bold text-sm">
-                <GraduationCap className="h-6 w-6 text-secondary" />
-                <div>
-                  <div className="leading-tight text-sm">Shree Reva MSW</div>
-                  <div className="text-[10px] opacity-70 leading-tight">Palanpur, Gujarat</div>
-                </div>
-              </Link>
-              <div className="flex items-center gap-2">
-                <Button
-                  size="sm"
-                  onClick={() => setApplyOpen(true)}
-                  className="bg-secondary text-secondary-foreground font-bold text-xs h-8 px-3 border-0"
-                >
-                  Apply Now
-                </Button>
-                <button
-                  onClick={() => setMobileOpen(!mobileOpen)}
-                  className="text-primary-foreground p-1.5 rounded hover:bg-white/15 transition-colors"
-                  aria-label={mobileOpen ? "Close menu" : "Open menu"}
-                >
-                  {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                </button>
-              </div>
-            </div>
+            <div className="md:hidden flex items-center justify-between h-16">
+  <Link href="/" className="flex items-center gap-2.5 text-primary-foreground font-bold">
+    <img src="/reva-logo.jpg" alt="Logo"
+      className="w-13 h-13 rounded-full object-contain bg-white p-0.5 shrink-0 ring-[2px] ring-primary"/>
+    <div>
+      <div className="leading-tight text-[15px] font-bold">Shree Reva MSW</div>
+      <div className="text-[10px] opacity-70 leading-tight">Palanpur, Gujarat</div>
+    </div>
+  </Link>
+  <div className="flex items-center gap-2">
+    <Button
+      size="sm"
+      onClick={() => setApplyOpen(true)}
+      className="bg-secondary text-secondary-foreground font-bold text-xs h-8 px-3 border-0"
+    >
+      Apply Now
+    </Button>
+    <button
+      onClick={() => setMobileOpen(!mobileOpen)}
+      className="text-primary-foreground p-1.5 rounded hover:bg-white/15 transition-colors"
+      aria-label={mobileOpen ? "Close menu" : "Open menu"}
+    >
+      {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+    </button>
+  </div>
+</div>
           </div>
         </nav>
 
