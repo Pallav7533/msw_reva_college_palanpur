@@ -166,8 +166,9 @@ export function Navbar() {
                 Affiliated to Hemchandracharya North Gujarat University (HNGU), Patan
               </div>
               <div className="flex items-center gap-2 mt-1">
-                <span className="bg-secondary text-secondary-foreground text-[10px] font-bold px-2 py-0.5 rounded-sm">NAAC Recognised</span>
-                <span className="border border-primary/25 text-primary text-[10px] font-semibold px-2 py-0.5 rounded-sm">Est. 2009</span>
+                <span className="bg-secondary text-secondary-foreground text-[10px] font-bo
+                ld px-2 py-0.5 rounded-sm">HNGU Recognised</span>
+                <span className="border border-primary/25 text-primary text-[10px] font-semibold px-2 py-0.5 rounded-sm">Est. 2024</span>
                 <span className="text-muted-foreground text-[10px]">Palanpur, Banaskantha, Gujarat 385001</span>
               </div>
             </div>

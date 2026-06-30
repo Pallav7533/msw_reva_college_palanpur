@@ -17,8 +17,8 @@ import { format } from "date-fns";
 const heroSlides = [
   {
     title: "Shaping Tomorrow's Social Workers",
-    sub: "A premier MSW institution in Palanpur, North Gujarat — HNGU affiliated, NAAC recognised. Blending academic rigour with immersive field practice.",
-    cta: "Apply for MSW 2025",
+    sub: "A premier MSW institution in Palanpur, North Gujarat — HNGU affiliated. Blending academic rigour with immersive field practice.",
+    cta: "Apply for MSW 2026",
     bg: "from-primary via-primary/95 to-primary/80",
   },
   {
@@ -36,15 +36,15 @@ const heroSlides = [
 ];
 
 const stats = [
-  { value: "15+", label: "Years of Excellence", icon: Trophy },
+  { value: "2+", label: "Years of Excellence", icon: Trophy },
   { value: "500+", label: "Successful Graduates", icon: GraduationCap },
-  { value: "95%", label: "Placement Rate", icon: Briefcase },
-  { value: "40+", label: "Partner Organisations", icon: Globe2 },
+  { value: "100%", label: "Placement Rate", icon: Briefcase },
+  { value: "5+", label: "Partner Organisations", icon: Globe2 },
 ];
 
 const quickLinks = [
   { label: "Explore MSW Programme", sub: "Curriculum, Subjects, Specialisations", href: "/courses", icon: BookOpen, color: "bg-primary" },
-  { label: "Admission 2025–26", sub: "Eligibility, Fees, How to Apply", href: "/admissions", icon: FileText, color: "bg-secondary" },
+  { label: "Admission 2026–27", sub: "Eligibility, Fees, How to Apply", href: "/admissions", icon: FileText, color: "bg-secondary" },
   { label: "Notices & Circulars", sub: "Academic Announcements & Alerts", href: "/notices", icon: Bell, color: "bg-primary" },
   { label: "Events & Activities", sub: "NSS, Guest Lectures, Field Camps", href: "/events", icon: Calendar, color: "bg-secondary" },
 ];
@@ -53,7 +53,7 @@ const whyChoose = [
   { icon: Users, title: "Expert Faculty", desc: "Learn from PhDs, academicians and seasoned social work practitioners with 15+ years field experience." },
   { icon: MapPin, title: "Extensive Field Work", desc: "Mandatory concurrent field placements at 40+ partner NGOs, hospitals, and government agencies." },
   { icon: Briefcase, title: "Placement Support", desc: "Dedicated cell connecting graduates with top NGOs, CSR foundations, UNICEF, and UN bodies." },
-  { icon: Award, title: "NAAC & HNGU", desc: "Quality-assured education under Hemchandracharya North Gujarat University, Patan's framework." },
+  { icon: Award, title: "HNGU", desc: "Quality-assured education under Hemchandracharya North Gujarat University, Patan's framework." },
   { icon: Library, title: "Rich Library", desc: "Extensive social work literature, journals, dissertations, and digital resources for deep research." },
   { icon: Laptop, title: "Modern Campus", desc: "Fully equipped classrooms, computer lab, seminar hall, and digital learning facilities." },
   { icon: HeartHandshake, title: "Community Focus", desc: "Real-world projects in tribal, rural, and urban communities of North Gujarat." },
@@ -108,7 +108,7 @@ const recentNotices = notices.slice(0, 6);
       <section className="relative flex items-center overflow-hidden min-h-[560px] md:min-h-[580px]">
         {/* Real campus background image */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1920&auto=format&fit=crop')" }} />
+          style={{ backgroundImage: "url('/herobg.jpg')" }} />
         {/* Dark maroon gradient overlay — heavy on left, lighter on right to show image */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/97 via-primary/90 to-primary/65" />
         {/* Bottom vignette */}
@@ -124,7 +124,7 @@ const recentNotices = notices.slice(0, 6);
           >
             <div className="inline-flex items-center gap-2 bg-white/15 border border-white/20 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-              Admissions Open — MSW Batch 2025–27
+              Admissions Open — MSW Batch 2026–28
             </div>
             <h1 className="font-bold text-3xl md:text-5xl leading-tight mb-5" style={{ fontFamily: "Poppins, sans-serif" }}>
               {heroSlides[slide].title.split("Social Workers").map((part, i, arr) =>
@@ -140,22 +140,22 @@ const recentNotices = notices.slice(0, 6);
                 onClick={() => setApplyOpen(true)}
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold h-12 px-7 rounded text-base shadow-lg"
               >
-                Apply Now 2025 <ArrowRight className="ml-2 h-4 w-4" />
+                Apply Now 2026 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Link href="/courses">
                 <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/15 h-12 px-6 rounded text-base">
                   Explore Programme
                 </Button>
               </Link>
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919313059676" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-[#25D366] hover:bg-[#128C7E] text-white border-0 h-12 px-5 rounded text-base gap-2">
                   <MessageCircle className="h-4 w-4" /> WhatsApp
                 </Button>
               </a>
             </div>
             <div className="flex items-center gap-2 mt-4">
-              <a href="tel:+919876543210" className="flex items-center gap-1.5 text-white/70 hover:text-white text-sm transition-colors">
-                <Phone className="h-3.5 w-3.5" /> +91 98765 43210
+              <a href="tel:+919313059676" className="flex items-center gap-1.5 text-white/70 hover:text-white text-sm transition-colors">
+                <Phone className="h-3.5 w-3.5" /> +91 93130 59676
               </a>
             </div>
           </motion.div>
@@ -174,10 +174,10 @@ const recentNotices = notices.slice(0, 6);
               </h3>
               <div className="space-y-3">
                 {(recentNotices.slice(0, 4).length > 0 ? recentNotices.slice(0, 4) : [
-                  { id: 1, title: "Admission Open for MSW 2025–27", createdAt: new Date().toISOString(), isNew: true },
-                  { id: 2, title: "Guest Lecture on Social Policy — 5th July 2025", createdAt: new Date().toISOString(), isNew: true },
+                  { id: 1, title: "Admission Open for MSW 2026–28", createdAt: new Date().toISOString(), isNew: true },
+                  { id: 2, title: "Convocation Ceremony and Youth Conference — 17th April 2026", createdAt: new Date().toISOString(), isNew: true },
                   { id: 3, title: "NSS Camp Registration — Last Date 30 June", createdAt: new Date().toISOString(), isNew: false },
-                  { id: 4, title: "Semester IV Result Declared — Check HNGU Portal", createdAt: new Date().toISOString(), isNew: false },
+                  { id: 4, title: "Plastic Collection Camp-18th march 2026", createdAt: new Date().toISOString(), isNew: false },
                 ]).map((notice: { id: number; title: string; createdAt: string; isNew?: boolean }) => (
                   <Link href="/notices" key={notice.id}
                     className="flex items-start gap-2 hover:bg-white/10 rounded p-2 -mx-2 transition-colors group cursor-pointer block">
@@ -272,7 +272,7 @@ const recentNotices = notices.slice(0, 6);
                 <div className="p-5 grid md:grid-cols-2 gap-6">
                   <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
                     <p>
-                      <strong className="text-foreground">Shree Reva MSW College</strong>, established in 2009, is a premier institution for Master of Social Work (MSW) education located in Palanpur, the district headquarters of Banaskantha, North Gujarat.
+                      <strong className="text-foreground">Shree Reva MSW College</strong>, established in 2024, is a premier institution for Master of Social Work (MSW) education located in Palanpur, the district headquarters of Banaskantha, North Gujarat.
                     </p>
                     <p>
                       Affiliated to <strong className="text-primary">Hemchandracharya North Gujarat University (HNGU), Patan</strong>, the college offers a comprehensive two-year MSW programme designed to equip students with the knowledge, skills, and values essential for effective social work practice.
@@ -297,17 +297,17 @@ const recentNotices = notices.slice(0, 6);
                   <div className="space-y-3">
                     <div className="aspect-[4/3] rounded-lg overflow-hidden border border-border shadow-sm">
                       <img
-                        src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop"
+                        src="/herobg.jpg"
                         alt="Shree Reva MSW College Campus, Palanpur"
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                       />
                     </div>
                     <div className="grid grid-cols-2 gap-2">
                       {[
-                        { label: "Established", value: "2009" },
+                        { label: "Established", value: "2024" },
                         { label: "Affiliation", value: "HNGU" },
                         { label: "Programme", value: "MSW (2 yr)" },
-                        { label: "Intake", value: "60 Seats" },
+                        { label: "Intake", value: "100 Seats" },
                       ].map((item, i) => (
                         <div key={i} className="bg-primary/5 rounded p-3 text-center border border-primary/10">
                           <div className="font-bold text-primary text-base" style={{ fontFamily: "Poppins" }}>{item.value}</div>
