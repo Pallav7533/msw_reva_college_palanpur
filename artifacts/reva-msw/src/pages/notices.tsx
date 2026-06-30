@@ -38,7 +38,7 @@ export default function Notices() {
                 </CardContent>
               </Card>
             ))
-          ) : notices && notices.length > 0 ? (
+            ) : Array.isArray(notices) && notices.length > 0 ? (
             notices.map((notice) => (
               <Card key={notice.id} className="border-border hover:border-primary/40 transition-colors">
                 <CardContent className="p-6">

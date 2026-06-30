@@ -179,19 +179,20 @@ const recentNotices = notices.slice(0, 6);
                   { id: 3, title: "NSS Camp Registration — Last Date 30 June", createdAt: new Date().toISOString(), isNew: false },
                   { id: 4, title: "Plastic Collection Camp-18th march 2026", createdAt: new Date().toISOString(), isNew: false },
                 ]).map((notice: { id: number; title: string; createdAt: string; isNew?: boolean }) => (
-                  <Link href="/notices" key={notice.id}
-                    className="flex items-start gap-2 hover:bg-white/10 rounded p-2 -mx-2 transition-colors group cursor-pointer block">
-                    <span className="text-secondary mt-1 shrink-0 text-xs">◆</span>
-                    <div className="flex-1 min-w-0">
-                      <span className="text-sm text-white/90 group-hover:text-white line-clamp-2 leading-snug">{notice.title}</span>
-                      <span className="text-white/40 text-xs block mt-0.5">
-                        {format(new Date(notice.createdAt), "d MMM yyyy")}
-                      </span>
-                    </div>
-                    {notice.isNew && (
-                      <span className="text-[9px] font-bold bg-red-500 text-white px-1.5 py-0.5 rounded shrink-0 mt-0.5">NEW</span>
-                    )}
-                  </Link>
+                  <a href="https://www.instagram.com/revamswcollege/?hl=en" key={notice.id}
+  target="_blank" rel="noopener noreferrer"
+  className="flex items-start gap-2 hover:bg-white/10 rounded p-2 -mx-2 transition-colors group cursor-pointer block">
+  <span className="text-secondary mt-1 shrink-0 text-xs">◆</span>
+  <div className="flex-1 min-w-0">
+    <span className="text-sm text-white/90 group-hover:text-white line-clamp-2 leading-snug">{notice.title}</span>
+    <span className="text-white/40 text-xs block mt-0.5">
+      {format(new Date(notice.createdAt), "d MMM yyyy")}
+    </span>
+  </div>
+  {notice.isNew && (
+    <span className="text-[9px] font-bold bg-red-500 text-white px-1.5 py-0.5 rounded shrink-0 mt-0.5">NEW</span>
+  )}
+</a>
                 ))}
               </div>
               <Link href="/notices" className="flex items-center gap-1.5 text-secondary text-sm font-semibold mt-4 hover:underline">
@@ -329,14 +330,14 @@ const recentNotices = notices.slice(0, 6);
                   <div className="shrink-0">
                     <div className="w-28 h-28 rounded-lg overflow-hidden border-2 border-primary/20 shadow-sm">
                       <img
-                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop&crop=face"
+                        src="/founder.jpeg"
                         alt="Principal, Shree Reva MSW College"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="text-center mt-2">
-                      <div className="font-bold text-sm text-foreground" style={{ fontFamily: "Poppins" }}>Dr. [Principal Name]</div>
-                      <div className="text-muted-foreground text-xs">Principal</div>
+                      <div className="font-bold text-sm text-foreground" style={{ fontFamily: "Poppins" }}> Dhaval Joshi</div>
+                      <div className="text-muted-foreground text-xs">Founder</div>
                       <div className="text-muted-foreground text-xs">Shree Reva MSW College</div>
                     </div>
                   </div>
@@ -345,7 +346,7 @@ const recentNotices = notices.slice(0, 6);
                       "Social work is not just a profession — it is a commitment to humanity."
                     </p>
                     <p>
-                      Welcome to Shree Reva MSW College, where we believe in the transformative power of education combined with compassionate action. Since our establishment in 2009, we have been committed to nurturing social work professionals who make a tangible difference in communities across Gujarat and India.
+                      Welcome to Shree Reva MSW College, where we believe in the transformative power of education combined with compassionate action. Since our establishment in 2024, we have been committed to nurturing social work professionals who make a tangible difference in communities across Gujarat and India.
                     </p>
                     <p>
                       Our institution provides an academically rigorous yet practically grounded programme under the esteemed HNGU, Patan framework. Our faculty, field supervisors, and partner organisations work together to ensure every student graduates equipped with both head and heart — ready to serve society with skill and integrity.
@@ -400,10 +401,10 @@ const recentNotices = notices.slice(0, 6);
                   <span className="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse" />
                   <span className="text-secondary font-bold text-xs uppercase tracking-wider">Now Open</span>
                 </div>
-                <h3 className="font-bold text-lg mb-2" style={{ fontFamily: "Poppins" }}>Admission 2025–26</h3>
-                <p className="text-white/70 text-sm mb-4 leading-relaxed">Applications are now open for the MSW Batch 2025–27. Limited seats available — apply early to secure your admission.</p>
+                <h3 className="font-bold text-lg mb-2" style={{ fontFamily: "Poppins" }}>Admission 2026–27</h3>
+                <p className="text-white/70 text-sm mb-4 leading-relaxed">Applications are now open for the MSW Batch 2026–27. Limited seats available — apply early to secure your admission.</p>
                 <ul className="space-y-1.5 mb-4">
-                  {["Eligibility: Any Graduation (Min 45%)", "Duration: 2 Years (4 Semesters)", "Intake: 60 Seats", "Mode: Regular Full-Time"].map((pt, i) => (
+                  {["Eligibility: Any Graduation (Min 50%)", "Duration: 2 Years (4 Semesters)", "Intake: 100 Seats", "Mode: Regular Full-Time"].map((pt, i) => (
                     <li key={i} className="flex items-center gap-1.5 text-white/80 text-xs">
                       <ChevronRight className="h-3 w-3 text-secondary shrink-0" /> {pt}
                     </li>
@@ -431,7 +432,7 @@ const recentNotices = notices.slice(0, 6);
                 </div>
                 <div className="divide-y divide-border">
                   {(recentNotices.length > 0 ? recentNotices : [
-                    { id: 1, title: "Admission Open — MSW Batch 2025-27", createdAt: new Date().toISOString(), isNew: true },
+                    { id: 1, title: "Admission Open — MSW Batch 2026-27", createdAt: new Date().toISOString(), isNew: true },
                     { id: 2, title: "Guest Lecture: Social Policy & Welfare — July 5", createdAt: new Date().toISOString(), isNew: true },
                     { id: 3, title: "NSS Camp Registration — Last Date June 30", createdAt: new Date().toISOString(), isNew: true },
                     { id: 4, title: "Blood Donation Camp — July 1, 2025", createdAt: new Date().toISOString(), isNew: false },
@@ -460,17 +461,17 @@ const recentNotices = notices.slice(0, 6);
                   <h3 className="text-white font-bold text-sm" style={{ fontFamily: "Poppins" }}>Quick Contact</h3>
                 </div>
                 <div className="p-4 space-y-3">
-                  <a href="tel:+919876543210"
+                  <a href="tel:+919313059676"
                     className="flex items-center gap-3 p-3 rounded border border-border hover:border-primary/30 hover:bg-primary/5 transition-all group">
                     <div className="bg-primary/10 rounded p-2 group-hover:bg-primary group-hover:text-white transition-colors">
                       <Phone className="h-4 w-4 text-primary group-hover:text-white" />
                     </div>
                     <div>
                       <div className="text-xs text-muted-foreground">Admissions Helpline</div>
-                      <div className="font-semibold text-sm text-foreground">+91 98765 43210</div>
+                      <div className="font-semibold text-sm text-foreground">+91 93130 59676</div>
                     </div>
                   </a>
-                  <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+                  <a href="https://wa.me/919313059676" target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-3 p-3 rounded border border-border hover:border-[#25D366]/50 hover:bg-[#25D366]/5 transition-all group">
                     <div className="bg-[#25D366]/10 rounded p-2 group-hover:bg-[#25D366] group-hover:text-white transition-colors">
                       <MessageCircle className="h-4 w-4 text-[#25D366] group-hover:text-white" />
@@ -566,14 +567,14 @@ const recentNotices = notices.slice(0, 6);
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
-              { label: "NSS Camp & Social Service", img: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=400&auto=format&fit=crop" },
-              { label: "Guest Lectures & Seminars", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=400&auto=format&fit=crop" },
-              { label: "Field Work Presentations", img: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=400&auto=format&fit=crop" },
-              { label: "Cultural & Sports Events", img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=400&auto=format&fit=crop" },
-              { label: "Blood Donation Drive", img: "https://images.unsplash.com/photo-1582213782179-e4776f4ad9f4?q=80&w=400&auto=format&fit=crop" },
-              { label: "Community Outreach", img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=400&auto=format&fit=crop" },
-              { label: "Annual Prize Distribution", img: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=400&auto=format&fit=crop" },
-              { label: "Alumni Meet & Networking", img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=400&auto=format&fit=crop" },
+              { label: "Camp & Social Service", img: "/camp ss.jpeg" },
+              { label: "Guest Lectures & Seminars", img: "lecture.jpeg" },
+              { label: "Field Work Presentations", img: "field.jpeg" },
+              { label: "Cultural Events", img: "cultural.jpeg" },
+              { label: "Dipotsav Program", img: "dipotsav.jpeg" },
+              { label: "Navratri 2025", img: "navratri.jpeg" },
+              { label: "Influencer award", img: "influencer.jpeg" },
+              { label: "Alumni Meet & Networking", img: "meetup.jpeg" },
             ].map((item, i) => (
               <a key={i} href="https://www.instagram.com/revamswcollege/" target="_blank" rel="noopener noreferrer"
                 className="aspect-square relative overflow-hidden rounded-lg group cursor-pointer border border-border shadow-sm">
@@ -598,9 +599,9 @@ const recentNotices = notices.slice(0, 6);
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { name: "Priya Sharma", batch: "MSW Batch 2020–22", role: "Programme Officer, UNICEF India", quote: "Shree Reva gave me both the academic foundation and practical field experience that directly led to my current role at UNICEF. The faculty's guidance was exceptional.", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop&crop=face" },
-              { name: "Rahul Patel", batch: "MSW Batch 2019–21", role: "District Social Worker, Govt. of Gujarat", quote: "The field work placements at Shree Reva were invaluable. I worked with tribal communities in Banaskantha which built my understanding of ground-level social issues.", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop&crop=face" },
-              { name: "Kavita Joshi", batch: "MSW Batch 2021–23", role: "CSR Manager, Tata Trusts", quote: "The research methodology training and dissertation project at Shree Reva MSW College equipped me perfectly for CSR programme design and evaluation.", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop&crop=face" },
+              { name: "Priya Sharma", batch: "MSW Batch 2024–25",quote: "Shree Reva gave me both the academic foundation and practical field experience that directly led to my current role . The faculty's guidance was exceptional.", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop&crop=face" },
+              { name: "Rahul Patel", batch: "MSW Batch 2024–25", quote: "The field work placements at Shree Reva were invaluable. I worked with tribal communities in Banaskantha which built my understanding of ground-level social issues.", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop&crop=face" },
+              { name: "Kavita Joshi", batch: "MSW Batch 2024–25", quote: "The research methodology training and dissertation project at Shree Reva MSW College equipped me perfectly for CSR programme design and evaluation.", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop&crop=face" },
             ].map((t, i) => (
               <motion.div key={i}
                 initial={{ opacity: 0, y: 15 }}
@@ -619,7 +620,6 @@ const recentNotices = notices.slice(0, 6);
                   </div>
                   <div>
                     <div className="font-bold text-sm text-foreground">{t.name}</div>
-                    <div className="text-muted-foreground text-xs">{t.role}</div>
                     <div className="text-primary text-xs font-medium">{t.batch}</div>
                   </div>
                 </div>
@@ -644,10 +644,10 @@ const recentNotices = notices.slice(0, 6);
               <div className="space-y-2 text-sm mb-5">
                 <div className="flex items-start gap-2 text-muted-foreground">
                   <MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                  Near Bus Stand, Palanpur, Banaskantha, Gujarat – 385001
+                  Shree Reva MSW College, Upasana Vidhyalaya Campus, Akesan Rd, next to Akshatam Bangalows, Laxmipura, Palanpur, Gujarat 385001
                 </div>
                 <a href="tel:+919876543210" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                  <Phone className="h-4 w-4 text-primary shrink-0" /> +91 98765 43210
+                  <Phone className="h-4 w-4 text-primary shrink-0" /> +91 93130 59676
                 </a>
               </div>
               <div className="flex flex-wrap gap-3">
@@ -664,7 +664,7 @@ const recentNotices = notices.slice(0, 6);
             </div>
             <div className="rounded-lg overflow-hidden border border-border shadow-sm h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.5!2d72.4356!3d24.1717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395cbc!2sPalanpur%2C+Gujarat!5e0!3m2!1sen!2sin!4v1"
+                src="https://maps.google.com/maps?q=Shree+Reva+MSW+College,+Upasana+Vidhyalaya+Campus,+Akesan+Rd,+Laxmipura,+Palanpur,+Gujarat+385001&output=embed&z=16"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
