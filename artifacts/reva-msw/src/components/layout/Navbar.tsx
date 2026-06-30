@@ -115,9 +115,9 @@ export function Navbar() {
     tickerItems.length > 0
       ? tickerItems
       : [
-          "Admissions Open 2025-26 for MSW Programme",
-          "Guest Lecture on Social Policy",
-          "NSS Camp Registration Open",
+          "Admissions Open 2026-27 for MSW Programme",
+          "Guest Lecture on Social welfare",
+          "Free GCAS Registration Open",
         ];
 
 
@@ -130,11 +130,11 @@ export function Navbar() {
       <div className="bg-primary text-primary-foreground text-xs hidden md:block">
         <div className="max-w-[1200px] mx-auto px-4 h-9 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <a href="tel:+919876543210" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
-              <Phone className="h-3 w-3" /> +91 98765 43210
+            <a href="tel:+919313059676" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
+              <Phone className="h-3 w-3" /> +91 93130 59676
             </a>
             <a href="mailto:info@revamswcollege.edu.in" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
-              <Mail className="h-3 w-3" /> info@revamswcollege.edu.in
+              <Mail className="h-3 w-3" /> revamswcollege@gmail.com
             </a>
             <span className="flex items-center gap-1.5 opacity-70">
               <Clock className="h-3 w-3" /> Mon–Sat: 9:00 AM – 5:00 PM
@@ -143,7 +143,7 @@ export function Navbar() {
           <div className="flex items-center gap-4 opacity-90">
             <Link href="/notices" className="hover:text-secondary transition-colors font-medium">Notices / Circulars</Link>
             <span className="opacity-40">|</span>
-            <a href="https://hngu.ac.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">HNGU Portal</a>
+            <a href="https://ngu.ac.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">HNGU Portal</a>
             <span className="opacity-40">|</span>
             <Link href="/contact" className="hover:text-secondary transition-colors">RTI / Grievance</Link>
           </div>
@@ -196,7 +196,7 @@ export function Navbar() {
             onClick={() => setApplyOpen(true)}
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-5 h-10 text-sm shadow shrink-0"
           >
-            Apply Now 2025
+            Apply Now 2026
           </Button>
         </div>
       </div>
@@ -251,7 +251,7 @@ export function Navbar() {
             </div>
 
             {/* Mobile: logo + hamburger */}
-            <div className="md:hidden flex items-center justify-between h-16">
+            <div className="md:hidden flex items-center justify-between h-20">
   <Link href="/" className="flex items-center gap-2.5 text-primary-foreground font-bold">
     <img src="/reva-logo.jpg" alt="Logo"
       className="w-13 h-13 rounded-full object-contain bg-white p-0.5 shrink-0 ring-[2px] ring-primary"/>
@@ -314,8 +314,8 @@ export function Navbar() {
 
                 {/* Contact quick bar */}
                 <div className="bg-muted border-b border-border px-5 py-3 flex flex-col gap-1.5">
-                  <a href="tel:+919876543210" className="flex items-center gap-2 text-xs text-primary font-medium">
-                    <Phone className="h-3 w-3" /> +91 98765 43210
+                  <a href="tel:+919313059676" className="flex items-center gap-2 text-xs text-primary font-medium">
+                    <Phone className="h-3 w-3" /> +91 93130 59676
                   </a>
                   <a href="mailto:info@revamswcollege.edu.in" className="flex items-center gap-2 text-xs text-muted-foreground">
                     <Mail className="h-3 w-3" /> info@revamswcollege.edu.in
@@ -335,10 +335,10 @@ export function Navbar() {
                     onClick={() => { setApplyOpen(true); setMobileOpen(false); }}
                     className="w-full bg-primary text-primary-foreground font-bold h-11"
                   >
-                    Apply Now 2025
+                    Apply Now 2026
                   </Button>
                   <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/919313059676"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-2 flex items-center justify-center gap-2 w-full h-10 rounded bg-[#25D366] text-white text-sm font-semibold"
