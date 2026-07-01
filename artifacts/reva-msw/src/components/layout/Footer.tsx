@@ -91,7 +91,6 @@ export function Footer() {
                 { label: "Home", href: "/" },
                 { label: "About the College", href: "/about" },
                 { label: "MSW Programme", href: "/courses" },
-                { label: "Faculty Profile", href: "/faculty" },
                 { label: "Admissions 2026", href: "/admissions" },
                 { label: "Notices & Circulars", href: "/notices" },
                 { label: "Photo Gallery", href: "/gallery" },

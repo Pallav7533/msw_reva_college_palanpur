@@ -43,15 +43,7 @@ const navItems = [
       { label: "Important Dates", href: "/admissions#dates" },
     ],
   },
-  {
-    label: "Faculty",
-    href: "/faculty",
-    children: [
-      { label: "Teaching Faculty", href: "/faculty" },
-      { label: "Guest Lecturers", href: "/faculty#guest" },
-      { label: "Support Staff", href: "/faculty#staff" },
-    ],
-  },
+  
   {
     label: "Student Zone",
     href: "/events",
@@ -117,7 +109,7 @@ export function Navbar() {
       : [
           "Admissions Open 2026-27 for MSW Programme",
           "Guest Lecture on Social welfare",
-          "Free GCAS Registration Open",
+          "Free GCAS Registration By reva college ",
         ];
 
 
@@ -303,14 +295,27 @@ export function Navbar() {
               >
                 {/* Drawer header */}
                 <div className="bg-primary px-5 py-4 flex items-center justify-between shrink-0">
-                  <div className="flex items-center gap-2 text-primary-foreground">
-                    <GraduationCap className="h-5 w-5 text-secondary" />
-                    <span className="font-bold text-sm" style={{ fontFamily: "Poppins,sans-serif" }}>Shree Reva MSW</span>
-                  </div>
-                  <button onClick={() => setMobileOpen(false)} className="text-primary-foreground/80 hover:text-primary-foreground p-1">
-                    <X className="h-5 w-5" />
-                  </button>
-                </div>
+  <div className="flex items-center gap-2 text-primary-foreground">
+    <img
+      src="/reva-logo.jpg"
+      alt="Shree Reva MSW Logo"
+      className="h-8 w-8 rounded-full object-cover"
+    />
+    <span
+      className="font-bold text-sm"
+      style={{ fontFamily: "Poppins,sans-serif" }}
+    >
+      Shree Reva MSW
+    </span>
+  </div>
+
+  <button
+    onClick={() => setMobileOpen(false)}
+    className="text-primary-foreground/80 hover:text-primary-foreground p-1"
+  >
+    <X className="h-5 w-5" />
+  </button>
+</div>
 
                 {/* Contact quick bar */}
                 <div className="bg-muted border-b border-border px-5 py-3 flex flex-col gap-1.5">
