@@ -615,14 +615,11 @@ const recentNotices = notices.slice(0, 6);
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4 italic">"{t.quote}"</p>
                 <div className="flex items-center gap-3 pt-3 border-t border-border">
-                  <div className="w-9 h-9 rounded-full overflow-hidden border border-primary/20 shrink-0">
-                    <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-sm text-foreground">{t.name}</div>
-                    <div className="text-primary text-xs font-medium">{t.batch}</div>
-                  </div>
-                </div>
+  <div>
+    <div className="font-bold text-sm text-foreground">{t.name}</div>
+    <div className="text-primary text-xs font-medium">{t.batch}</div>
+  </div>
+</div>
               </motion.div>
             ))}
           </div>

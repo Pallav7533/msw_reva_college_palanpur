@@ -16,7 +16,7 @@ export default function About() {
           <Badge variant="outline" className="mb-4 text-primary border-primary/20 bg-primary/10">Institution Profile</Badge>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">About Shree Reva MSW College</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Dedicated to fostering excellence in social work education since 2008, shaping compassionate leaders for a better tomorrow.
+            Dedicated to fostering excellence in social work education since 2024, shaping compassionate leaders for a better tomorrow.
           </p>
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function About() {
                 <ul className="space-y-4 text-sm">
                   <li className="border-b border-border pb-3">
                     <span className="text-muted-foreground block mb-1">Established</span>
-                    <span className="font-medium text-foreground">2008</span>
+                    <span className="font-medium text-foreground">2024</span>
                   </li>
                   <li className="border-b border-border pb-3">
                     <span className="text-muted-foreground block mb-1">Affiliation</span>
@@ -89,9 +89,9 @@ export default function About() {
 
             <Card className="bg-muted border-none">
               <CardContent className="p-6 text-center">
-                <div className="w-24 h-24 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-display font-bold">
-                  PR
-                </div>
+              <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-primary/20 shadow">
+  <img src="/founder.jpeg" alt="Principal" className="w-full h-full object-cover" />
+</div>
                 <h3 className="font-bold text-lg mb-1">Principal's Message</h3>
                 <p className="text-sm text-muted-foreground italic mb-4">
                   "Education in social work is not just about a career; it's a commitment to human welfare. At Reva, we nurture that commitment."

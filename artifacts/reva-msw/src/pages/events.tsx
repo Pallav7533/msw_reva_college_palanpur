@@ -11,18 +11,18 @@ export default function Events() {
 
   const events = [
     {
-      title: "Annual Social Work Seminar 2024",
-      date: "March 15, 2024",
+      title: "Student-Management Interaction",
+      date: "June 15, 2025",
       type: "Seminar",
       icon: Users,
-      desc: "A state-level seminar on 'Rural Development Challenges in Gujarat' featuring prominent sociologists."
+      desc: "A platform for open dialogue between students and management to bridge communication gaps and promote student development."
     },
     {
-      title: "NSS Camp at Dantiwada",
-      date: "February 10-17, 2024",
+      title: "Plastic collection camp at Jungle",
+      date: "March 17-18, 2026",
       type: "Field Camp",
       icon: CalendarDays,
-      desc: "7-day residential camp focusing on health awareness and cleanliness drives in rural areas."
+      desc: "2-day residential camp focusing on plastic waste collection and environmental cleanliness drives in forest areas."
     },
     {
       title: "World Social Work Day Celebration",

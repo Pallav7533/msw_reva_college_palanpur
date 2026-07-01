@@ -87,8 +87,8 @@ export default function Contact() {
                     <h3 className="font-bold mb-1">Campus Address</h3>
                     <p className="text-muted-foreground text-sm">
                       Shree Reva MSW College<br />
-                      Palanpur, Banaskantha District<br />
-                      Gujarat - 385001
+                      Upasana Vidhyalaya Campus, Akesan Rd, next to Akshatam Bangalow<br />
+                      Laxmipura, Palanpur, Gujarat 385001
                     </p>
                   </div>
                 </div>
@@ -99,8 +99,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Phone Number</h3>
-                    <p className="text-muted-foreground text-sm">+91 98765 43210</p>
-                    <p className="text-muted-foreground text-sm">+91 98765 43211</p>
+                    <p className="text-muted-foreground text-sm">+91 93130 59676</p>
+                    
                   </div>
                 </div>
 
@@ -110,8 +110,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Email Address</h3>
-                    <p className="text-muted-foreground text-sm">info@revamswcollege.edu.in</p>
-                    <p className="text-muted-foreground text-sm">admissions@revamswcollege.edu.in</p>
+                    <p className="text-muted-foreground text-sm">revamswcollege</p>
                   </div>
                 </div>
 
@@ -134,7 +133,9 @@ export default function Contact() {
                   <h3 className="font-bold mb-1">Chat with us on WhatsApp</h3>
                   <p className="text-sm text-muted-foreground">For quick queries regarding admission</p>
                 </div>
-                <Button className="bg-[#25D366] hover:bg-[#128C7E] text-white">Connect</Button>
+                <a href="https://wa.me/919313059676" target="_blank" rel="noopener noreferrer">
+  <Button className="bg-[#25D366] hover:bg-[#128C7E] text-white">Connect</Button>
+</a>
               </CardContent>
             </Card>
           </div>
@@ -154,7 +155,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel>Full Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" {...field} />
+                            <Input placeholder="Pallav chavda" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -169,7 +170,7 @@ export default function Contact() {
                           <FormItem>
                             <FormLabel>Email</FormLabel>
                             <FormControl>
-                              <Input placeholder="john@example.com" {...field} />
+                              <Input placeholder="pallav@gmail.com" {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -182,7 +183,7 @@ export default function Contact() {
                           <FormItem>
                             <FormLabel>Phone Number</FormLabel>
                             <FormControl>
-                              <Input placeholder="9876543210" {...field} />
+                              <Input placeholder="9313059676" {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -238,7 +239,7 @@ export default function Contact() {
       <div className="w-full h-[400px] bg-muted relative">
         {/* Placeholder for iframe map - Palanpur */}
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116347.16858169994!2d72.33966089330999!3d24.17242137953258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395ce9c20a8db0bd%3A0xc3dd6cce2ee67732!2sPalanpur%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1709664539123!5m2!1sen!2sin" 
+          src="https://maps.google.com/maps?q=Shree+Reva+MSW+College,+Upasana+Vidhyalaya+Campus,+Akesan+Rd,+Laxmipura,+Palanpur,+Gujarat+385001&output=embed&z=17"
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 

@@ -15,7 +15,7 @@ export default function Admissions() {
     <Layout>
       <div className="bg-primary/5 py-12 md:py-20 px-4 border-b border-border">
         <div className="container mx-auto max-w-4xl text-center">
-          <Badge variant="secondary" className="mb-4">Admissions Open 2025-26</Badge>
+          <Badge variant="secondary" className="mb-4">Admissions Open 2026-27</Badge>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">Admission Process</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Join North Gujarat's premier MSW institution. Follow the simple steps below to secure your admission.
