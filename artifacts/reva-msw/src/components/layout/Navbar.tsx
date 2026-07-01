@@ -133,7 +133,7 @@ export function Navbar() {
             <a href="tel:+919313059676" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
               <Phone className="h-3 w-3" /> +91 93130 59676
             </a>
-            <a href="mailto:info@revamswcollege.edu.in" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
+            <a href="mailto:revamswcollege@gmail.com" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
               <Mail className="h-3 w-3" /> revamswcollege@gmail.com
             </a>
             <span className="flex items-center gap-1.5 opacity-70">
@@ -317,8 +317,8 @@ export function Navbar() {
                   <a href="tel:+919313059676" className="flex items-center gap-2 text-xs text-primary font-medium">
                     <Phone className="h-3 w-3" /> +91 93130 59676
                   </a>
-                  <a href="mailto:info@revamswcollege.edu.in" className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <Mail className="h-3 w-3" /> info@revamswcollege.edu.in
+                  <a href="mailto:revamswcollege@gmail.com" className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <Mail className="h-3 w-3" /> revamswcollege@gmail.com
                   </a>
                 </div>
 

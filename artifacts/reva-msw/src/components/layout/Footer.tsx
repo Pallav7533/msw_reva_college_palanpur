@@ -180,7 +180,7 @@ export function Footer() {
             <span>|</span>
             <Link href="/contact" className="hover:text-secondary transition-colors">Sitemap</Link>
             <span>|</span>
-            <a href="https://hngu.ac.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">HNGU, Patan</a>
+            <a href="https://ngu.ac.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">HNGU, Patan</a>
           </div>
         </div>
       </div>
