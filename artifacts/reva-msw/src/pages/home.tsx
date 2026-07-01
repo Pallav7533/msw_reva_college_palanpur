@@ -46,7 +46,7 @@ const quickLinks = [
   { label: "Explore MSW Programme", sub: "Curriculum, Subjects, Specialisations", href: "/courses", icon: BookOpen, color: "bg-primary" },
   { label: "Admission 2026–27", sub: "Eligibility, Fees, How to Apply", href: "/admissions", icon: FileText, color: "bg-secondary" },
   { label: "Notices & Circulars", sub: "Academic Announcements & Alerts", href: "/notices", icon: Bell, color: "bg-primary" },
-  { label: "Events & Activities", sub: "NSS, Guest Lectures, Field Camps", href: "/events", icon: Calendar, color: "bg-secondary" },
+  { label: "Events & Activities", sub: "Medical Camp, Guest Lectures, Field Camps", href: "/events", icon: Calendar, color: "bg-secondary" },
 ];
 
 const whyChoose = [
@@ -71,7 +71,7 @@ const facilities = [
   { icon: Library, label: "Well-Stocked Library" },
   { icon: Laptop, label: "Computer Lab" },
   { icon: Building2, label: "Seminar Hall" },
-  { icon: FlaskConical, label: "Research Lab" },
+  { icon: FlaskConical, label: "Field Camps" },
   { icon: Landmark, label: "Hostel Guidance" },
   { icon: Globe2, label: "Internet & Wi-Fi" },
 ];
@@ -124,7 +124,7 @@ const recentNotices = notices.slice(0, 6);
           >
             <div className="inline-flex items-center gap-2 bg-white/15 border border-white/20 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-              Admissions Open — MSW Batch 2026–28
+              Admissions Open — MSW Batch 2026–27
             </div>
             <h1 className="font-bold text-3xl md:text-5xl leading-tight mb-5" style={{ fontFamily: "Poppins, sans-serif" }}>
               {heroSlides[slide].title.split("Social Workers").map((part, i, arr) =>
@@ -174,9 +174,9 @@ const recentNotices = notices.slice(0, 6);
               </h3>
               <div className="space-y-3">
                 {(recentNotices.slice(0, 4).length > 0 ? recentNotices.slice(0, 4) : [
-                  { id: 1, title: "Admission Open for MSW 2026–28", createdAt: new Date().toISOString(), isNew: true },
+                  { id: 1, title: "Admission Open for MSW 2026–27", createdAt: new Date().toISOString(), isNew: true },
                   { id: 2, title: "Convocation Ceremony and Youth Conference — 17th April 2026", createdAt: new Date().toISOString(), isNew: true },
-                  { id: 3, title: "NSS Camp Registration — Last Date 30 June", createdAt: new Date().toISOString(), isNew: false },
+                  { id: 3, title: "Medical Camp Registration — Last Date 30 June", createdAt: new Date().toISOString(), isNew: false },
                   { id: 4, title: "Plastic Collection Camp-18th march 2026", createdAt: new Date().toISOString(), isNew: false },
                 ]).map((notice: { id: number; title: string; createdAt: string; isNew?: boolean }) => (
                   <a href="https://www.instagram.com/revamswcollege/?hl=en" key={notice.id}
@@ -282,7 +282,7 @@ const recentNotices = notices.slice(0, 6);
                       Our curriculum integrates classroom learning with intensive field placements across hospitals, NGOs, tribal development projects, and government agencies — ensuring graduates are practice-ready from Day 1.
                     </p>
                     <ul className="space-y-1.5 pt-1">
-                      {["UGC recognized 2-year MSW programme", "HNGU affiliated & NAAC recognised", "40+ field placement partner organisations", "Dedicated NSS & social extension wing", "Strong alumni network across Gujarat & India"].map((pt, i) => (
+                      {["UGC recognized 2-year MSW programme", "HNGU affiliated & NAAC recognised", "40+ field placement partner organisations", "Dedicated Camp & social extension wing", "Strong alumni network across Gujarat & India"].map((pt, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <ChevronRight className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" />
                           <span>{pt}</span>
@@ -434,7 +434,7 @@ const recentNotices = notices.slice(0, 6);
                   {(recentNotices.length > 0 ? recentNotices : [
                     { id: 1, title: "Admission Open — MSW Batch 2026-27", createdAt: new Date().toISOString(), isNew: true },
                     { id: 2, title: "Guest Lecture: Social Policy & Welfare — July 5", createdAt: new Date().toISOString(), isNew: true },
-                    { id: 3, title: "NSS Camp Registration — Last Date June 30", createdAt: new Date().toISOString(), isNew: true },
+                    { id: 3, title: "Medical Camp Registration — Last Date June 30", createdAt: new Date().toISOString(), isNew: true },
                     { id: 4, title: "Blood Donation Camp — July 1, 2025", createdAt: new Date().toISOString(), isNew: false },
                     { id: 5, title: "Semester IV Result Declared on HNGU Portal", createdAt: new Date().toISOString(), isNew: false },
                     { id: 6, title: "Orientation Programme for New Students — July 15", createdAt: new Date().toISOString(), isNew: false },
@@ -571,7 +571,7 @@ const recentNotices = notices.slice(0, 6);
               { label: "Guest Lectures & Seminars", img: "lecture.jpeg" },
               { label: "Field Work Presentations", img: "field.jpeg" },
               { label: "Cultural Events", img: "cultural.jpeg" },
-              { label: "Dipotsav Program", img: "dipotsav.jpeg" },
+              { label: "Plastic collection camp", img: "plastic camp.jpeg" },
               { label: "Navratri 2025", img: "navratri.jpeg" },
               { label: "Influencer award", img: "influencer.jpeg" },
               { label: "Alumni Meet & Networking", img: "meetup.jpeg" },
